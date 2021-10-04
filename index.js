@@ -38,11 +38,17 @@ function makeSound(key) {
 }
 
 //Function for button animation
-function buttonAnimation(currentKey) {
-    document.querySelector("."+currentKey).classList.add("pressed");
+function buttonAnimation(currentKey) {   
+    try{
+        document.querySelector("."+currentKey).classList.add("pressed");
     setTimeout(function () {
         document.querySelector("."+currentKey).classList.remove("pressed");   
-    },100);    
+    },100);   
+    }
+    catch (e){
+
+    };
+ 
 }
 
 //When buttons are clicked
